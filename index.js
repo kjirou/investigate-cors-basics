@@ -33,6 +33,12 @@ app.get('/allowed.json', (req, res) => {
     port,
   })
 })
+app.get('/no-policy.json', (req, res) => {
+  res.json({
+    time: new Date().getTime(),
+    port,
+  })
+})
 app.get('/get-json.js', (req, res) => {
   const js = `
 const main() => {
