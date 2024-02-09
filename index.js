@@ -15,6 +15,15 @@ app.get('/not-allowed.json', (req, res) => {
     port,
   })
 })
+app.get('/allowed-for-3000.json', (req, res) => {
+  res.header({
+    'Access-Control-Allow-Origin': 'http://localhost:3000',
+  })
+  res.json({
+    time: new Date().getTime(),
+    port,
+  })
+})
 app.get('/allowed.json', (req, res) => {
   res.header({
     'Access-Control-Allow-Origin': '*',
